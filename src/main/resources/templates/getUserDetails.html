@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/css/table.css" th:href="@{/css/table.css}"> </link>
+<meta charset="ISO-8859-1">
+<title>User INFO</title>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td th:text="${username}">username</td>
+      <td th:text="${email}">email</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

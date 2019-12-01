@@ -11,19 +11,17 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">P Name</th>
-      <th scope="col">Mfg Date</th>
-      <th scope="col">Exp Date</th>
-      <th scope="col">Price</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Email</th>
     </tr>
   </thead>
   <tbody>
-    <tr th:each="prod,iterStat : ${productlist}">
+    <tr th:each="user,iterStat : ${userlist}">
     	<td th:text="${iterStat.count}">Index</td>
-    	<td th:text="${prod.pName}">P Name</td>
-    	<td th:text="${prod.pMfgDate}">Mfg Date</td>
-    	<td th:text="${prod.pExDate}">Exp Date</td>
-    	<td th:text="${prod.price}">Price</td>
+    	<td th:text="${user.userName}">User Name</td>
+    	<td th:text="${user.userAge}">User Age</td>
+    	<td th:text="${user.userEmail}">User Email</td>
     
     </tr>
   </tbody>

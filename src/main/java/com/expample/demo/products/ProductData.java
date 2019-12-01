@@ -1,12 +1,13 @@
 package com.expample.demo.products;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ProductData {
 	
 	String pName;
-	Date pMfgDate;
-	Date pExDate;
+	String pMfgDate;
+	String pExDate;
 	Double price;
 	public String getpName() {
 		return pName;
@@ -14,16 +15,16 @@ public class ProductData {
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
-	public Date getpMfgDate() {
+	public String getpMfgDate() {
 		return pMfgDate;
 	}
-	public void setpMfgDate(Date pMfgDate) {
+	public void setpMfgDate(String pMfgDate) {
 		this.pMfgDate = pMfgDate;
 	}
-	public Date getpExDate() {
+	public String getpExDate() {
 		return pExDate;
 	}
-	public void setpExDate(Date pExDate) {
+	public void setpExDate(String pExDate) {
 		this.pExDate = pExDate;
 	}
 	public Double getPrice() {
@@ -34,9 +35,13 @@ public class ProductData {
 	}
 	public ProductData(String pName, Date pMfgDate, Date pExDate, Double price) {
 		super();
+		
+		String pattern = "yyyy-MM-dd";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			
 		this.pName = pName;
-		this.pMfgDate = pMfgDate;
-		this.pExDate = pExDate;
+		this.pMfgDate = simpleDateFormat.format(pMfgDate);
+		this.pExDate = simpleDateFormat.format(pExDate);
 		this.price = price;
 	}
 	
